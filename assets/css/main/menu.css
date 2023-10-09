@@ -1,0 +1,91 @@
+#menu-toggle-btn {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 20px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 999;
+  display: none;
+}
+
+.logoemenu span {
+  height: 2px;
+  background: #d9d9d9;
+  width: 24px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transition: all 0.3s;
+}
+
+.logoemenu span::before {
+  content: " ";
+  position: absolute;
+  display: inline-block;
+  height: 2px;
+  background: #d9d9d9;
+  transform: translateY(-4px);
+  width: 24px;
+  transition: all 0.3s;
+}
+
+.logoemenu span::before {
+  top: -2px;
+}
+
+.active span {
+  transform: rotate(45deg);
+  background: #d9d9d9;
+}
+
+.active span::before {
+  top: unset;
+  transform: rotate(-90deg);
+  background: #d9d9d9;
+}
+
+.active:hover span::before {
+  top: unset;
+}
+
+/* Caixa Menu */
+.bodyprincipal .menu-animation {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #051018;
+  display: none;
+  z-index: 99;
+}
+.bodyprincipal .menu-itens {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 80px;
+}
+
+.bodyprincipal .menu-partes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container-portfolio .logoemenu {
+  padding-right: 20px;
+}
+@media (max-width: 1100px) {
+  #menu-toggle-btn {
+    display: flex;
+  }
+  .logoemenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

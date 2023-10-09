@@ -1,0 +1,153 @@
+/* Estrutura Inicial */
+
+body {
+  background-color: #143959;
+}
+.container-grid {
+  display: grid;
+  grid-template-columns: 1fr minmax(300px, 890px);
+  grid-template-areas:
+    "main1 main2 "
+    "main1 main2"
+    "main1 img";
+}
+
+.img-p img {
+  width: 890px;
+  height: 400px;
+}
+
+/* Main 1 */
+
+.main-1 {
+  background-color: #143959;
+  padding: 0px 40px;
+  height: 100%;
+  grid-area: main1;
+}
+.bg-anima {
+  grid-area: main1;
+  height: 100%;
+  background-color: #d9d9d9;
+}
+.bg-anima2 {
+  grid-area: main2;
+  height: 100%;
+  background-color: #d9d9d9;
+}
+.title-1 {
+  padding: 80px;
+}
+
+.title-1 p {
+  text-align: end;
+  padding-top: 10px;
+  padding-left: 60px;
+  width: 219px;
+}
+.main-1 a {
+  display: block;
+  padding-top: 40px;
+}
+.redes-itens {
+  margin-top: 80px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Main 2 */
+.main-2 {
+  background-color: #d9d9d9;
+  height: 100%;
+  grid-area: main2;
+}
+.menu-header {
+  padding: 40px;
+}
+.menu-header nav {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.menu-header nav ul {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.premio {
+  margin-top: 40px;
+  width: 200px;
+  height: 40px;
+  background: #143959;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.explore {
+  padding: 40px;
+  width: 312px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.logo {
+  display: inline-block !important;
+}
+@media (max-width: 1100px) {
+  .menu-header nav {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .container-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "main1 "
+      "main2"
+      "img";
+  }
+  .title-1 {
+    padding: 0px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .main-1 {
+    padding: 20px;
+  }
+  .main-1 a {
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+  .redes {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .title-1 h1 {
+    font-size: 6rem;
+    width: 160px !important;
+    letter-spacing: normal;
+  }
+
+  .title-1 p {
+    padding-left: 0px;
+    text-align: start;
+  }
+
+  .explore {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .explore p {
+    width: 250px;
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,179 @@
+#menu-toggle-btn {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 20px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 99;
+  display: none;
+}
+
+.bodyportfolio .logoemenu span {
+  height: 2px;
+  background: #051018;
+  width: 24px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transition: all 0.3s;
+}
+
+.bodyportfolio .logoemenu span::before {
+  content: " ";
+  position: absolute;
+  display: inline-block;
+  height: 2px;
+  background: #051018;
+  transform: translateY(-4px);
+  width: 24px;
+  transition: all 0.3s;
+}
+
+.bodyportfolio .logoemenu span::before {
+  top: -2px;
+}
+
+.bodyportfolio .active span {
+  transform: rotate(45deg);
+  background: #d9d9d9;
+}
+
+.bodyportfolio .active span::before {
+  top: unset;
+  transform: rotate(-90deg);
+  background: #d9d9d9;
+}
+
+.bodyportfolio .active:hover span::before {
+  top: unset;
+}
+
+.bodyportfolio .logoemenu span {
+  height: 2px;
+  background: #051018;
+  width: 24px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transition: all 0.3s;
+}
+
+.bodyportfolio .logoemenu span::before {
+  content: " ";
+  position: absolute;
+  display: inline-block;
+  height: 2px;
+  background: #051018;
+  transform: translateY(-4px);
+  width: 24px;
+  transition: all 0.3s;
+}
+
+.bodyportfolio .logoemenu span::before {
+  top: -2px;
+}
+
+.bodyportfolio .active span {
+  transform: rotate(45deg);
+  background: #d9d9d9;
+}
+
+.bodyportfolio .active span::before {
+  top: unset;
+  transform: rotate(-90deg);
+  background: #d9d9d9;
+}
+
+.bodyportfolio .active:hover span::before {
+  top: unset;
+}
+
+/* Sobre */
+.bodysobre .logoemenu span {
+  height: 2px;
+  background: #d9d9d9;
+  width: 24px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transition: all 0.3s;
+}
+.bodysobre .logoemenu {
+  display: none !important;
+}
+
+.bodysobre .logoemenu span::before {
+  content: " ";
+  position: absolute;
+  display: inline-block;
+  height: 2px;
+  background: #d9d9d9;
+  transform: translateY(-4px);
+  width: 24px;
+  transition: all 0.3s;
+}
+
+.bodysobre .logoemenu span::before {
+  top: -2px;
+}
+
+.bodysobre .active span {
+  transform: rotate(45deg);
+  background: #d9d9d9;
+}
+
+.bodysobre .active span::before {
+  top: unset;
+  transform: rotate(-90deg);
+  background: #d9d9d9;
+}
+
+.bodysobre .active:hover span::before {
+  top: unset;
+}
+
+.bodysobre .logoemenu {
+  padding: 20px;
+}
+
+/* Caixa Menu */
+.menu-animation {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #051018;
+  display: none;
+  z-index: 98;
+}
+
+.menu-itens {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 80px;
+}
+
+.menu-partes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (max-width: 1100px) {
+  #menu-toggle-btn {
+    display: flex;
+  }
+  .logoemenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .bodysobre .logoemenu {
+    display: flex !important;
+  }
+}
